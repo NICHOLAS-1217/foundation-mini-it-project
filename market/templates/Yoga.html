@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+{% block title %}
+    Yoga Course
+{% endblock %}
+
+{% block content %}
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+    opacity: 0.9;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+    border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	background-color: rgba(220, 220, 220, 0.6);
+	padding: 20px;
+	text-align: center;
+    border-radius: 7px;
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport9.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+<body>
+
+    <!-- MAIN (Center website) -->
+		<div class="main">
+
+            <h1>Yoga Courses</h1>
+            <hr>
+        
+            <h2>WHAT IS YOGA?</h2>
+            <p>Yoga as exercise is a physical activity consisting mainly of postures, often connected by flowing sequences, sometimes accompanied by breathing exercises, and frequently ending with relaxation lying down or meditation.It originated in ancient India and aim to control and still the mind, recognizing a detached witness-consciousness untouched by the mind and mundane suffering.</p>
+            <p>There are many types of yoga. Here is a brief introduction to the various yoga classes offered at our teams.</p>
+    
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                  <div class="column">
+                    <div class="content">
+                          <img src="https://d5sbbf6usl3xq.cloudfront.net/suryanamaskara.png" alt="Ashtanga Yoga" style="width:100%">
+                          <h3>Ashtanga Yoga</h3>
+                          <p>Ashtanga yoga is a direct offshoot of sage Patanjali's Yoga Sutras. Famous as the yoga form for weight loss, the ashtanga word is a derivative of the word eight in Sanskrit. </p>
+                        <p>It has eight pillars: Principles, personal discipline, asana and postures, pranayama, withdrawal, concentration, meditation and salvation. </p>
+                    </div>
+                  </div>
+    
+    
+                  <div class="column">
+                    <div class="content">
+                          <img src="https://staticg.sportskeeda.com/editor/2022/05/3e1b5-16515743359650-1920.jpg" alt="Vinyasa Yoga" style="width:100%">
+                          <h3>Vinyasa Yoga</h3>
+                          <p>This form of yoga is also called “flow” yoga. The word “Vinyasa” has two parts, with Vi meaning variation and Nyasa meaning within prescribed limits.</p>
+                        <p>Vinyasa yoga incorporates movement and breathing techniques. It creates a flow of postures with controlled breathing replicating the flow of life. Meditation is a part of advanced vinyasa yoga practices, making the form more mindful.</p>
+                        <p>Depending on the class level, Vinyasa Yoga can be mild or intense, and it is recommended that beginners start from the basic class. Vinyasa Yoga is suitable for both beginners and those who have practiced yoga for a long time.</p>
+                    </div>
+                  </div>
+    
+    
+                  <div class="column">
+                    <div class="content">
+                          <img src="https://iymv.org/wp-content/uploads/2018/01/restorative.gif" alt="Iyenger Yoga" style="width:100%">
+                          <h3>Iyengar Yoga</h3>
+                          <p>This type of yoga is quite similar to vinyasa yoga. It gets its name from B.K.S. Iyengar, one of the foremost yoga teachers in the world. Iyengar yoga is different from other types of yoga. It focuses primarily on posture, body alignment and opening of the body. It also uses props such as yoga blocks and belts to perfect poses.</p>
+                        <p>Iyengar yoga is very suitable for people who like to study the details of yoga movements, and standardized yoga movements can avoid accidents such as sports strains caused by incorrect postures for beginners in the process of learning yoga.</p>
+                    </div>
+                  </div>
+    
+    
+                  <div class="column">
+                    <div class="content">
+                          <img src="https://draxe.com/wp-content/uploads/2019/04/kundalini-yoga-thumbnail.jpg" alt="Kundalini Yoga" style="width:100%">
+                          <h3>Kundalini Yoga</h3>
+                          <p>Also known as the “yoga of awareness,” kundalini yoga includes repetitive poses. Kundalini Yoga Focuses on Breathing and Core Strength, it focuses on improving your concentration, awareness and senses. Each movement will be matched with a different breathing pattern, so that the efficiency of each movement can be maximized.</p> 
+                        <p>Compared with other types of yoga, Kundalini yoga is more focus on senses and meditative. It combines breathing, chanting, meditation, and gestures well. Although there are more seated movements in a Kundalini yoga class than other types of yoga classes, it is still physically exhausting. Kundalini Yoga is a challenge to your body and mind, while also enhancing your awareness and meditation.</p>
+                    </div>
+                  </div>
+            </div>
+        
+    
+        <div class="content">
+            <img src="https://media.istockphoto.com/photos/beautiful-attractive-asian-woman-practice-yoga-lotus-pose-on-the-pool-picture-id1074959548?k=20&m=1074959548&s=612x612&w=0&h=waZfrdRLzqJmHPyk-Yaydb7dE3EMqm2eZvEcRTBGYrE=" alt="Yoga" style="width:100%">
+              <h3>BENEFITS OF YOGA</h3>
+              <ul>
+                <p><li>Increased flexibility</li></p>
+                <p><li>Improved respiration, energy and vitality</li></p>
+                <p><li>Weight reduction</li></p>
+                <p><li>Regular yoga practice creates mental clarity and calmness</li></p>
+                <p><li>Relieves chronic stress patterns</li></p>
+                <p><li>Centres attention; and sharpens concentration</li></p>
+            </ul>
+            
+            <h3>HINT</h3>
+            <ol>
+                <p><li>If you are looking for yoga for anxiety and stress relief, upper back pain, lower back pain, or fat loss, ashtanga would be the best for you.</li></p>
+                <p><li>Vinyasa yoga is a good choice for the ones who like high-intensity exercises. In addition, Vinyasa yoga is ideal for anxiety, depression, blood pressure and sleep.</li></p>
+                <p><li>A study shows that Iyengar yoga has effectively cured musculoskeletal disorders. In this condition, one faces severe back and neck pain. In addition, it has shown visible results in treating disabilities of the spine. The development of strength, mobility and stability is progressive. It also helps in curing gynaecological and gastroenterological diseases.</li></p>
+                <p><li>Kundalini yoga is suitable for stress, anxiety, depression and better cognitive function.</li></p>
+            </ol>
+        </div>
+        
+        <!-- END MAIN -->
+        </div>
+        	
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div>
+        <h1 style="text-align: center">COURSE FEE</h1>
+            <div class="columns">
+                <ul class="price">
+                    <li class="header">Ashtanga Yoga</li>
+                    <li class="grey">RM 320 / month</li>
+                    <li>Provide Professional Coaches</li>
+                    <li>Provide Professional Training</li>
+                    <li>One Free Trial Lesson</li>
+                    <li>4 classes per month</li>
+                    <li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+                </ul>
+            </div>
+            
+            <div class="columns">
+                <ul class="price">
+                    <li class="header" style="background-color:mediumslateblue">Vinyasa Yoga</li>
+                    <li class="grey">RM 280 / month</li>
+                    <li>Provide Professional Coaches</li>
+                    <li>Provide Professional Training</li>
+                    <li>One Free Trial Lesson</li>
+                    <li>4 classes per month</li>
+                    <li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+                </ul>
+            </div>
+            
+            <div class="columns">
+                <ul class="price">
+                    <li class="header">Iyengar Yoga</li>
+                    <li class="grey">RM 300 / month</li>
+                    <li>Provide Professional Coaches</li>
+                    <li>Provide Professional Training</li>
+                    <li>One Free Trial Lesson</li>
+                    <li>4 classes per month</li>
+                    <li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <div class="columns">
+                <ul class="price">
+                    <li class="header" style="background-color:mediumslateblue">Kundalini Yoga</li>
+                    <li class="grey">RM 340 / month</li>
+                    <li>Provide Professional Coaches</li>
+                    <li>Provide Professional Training</li>
+                    <li>One Free Trial Lesson</li>
+                    <li>4 classes per month</li>
+                    <li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+</body>	
+{% endblock %}
+

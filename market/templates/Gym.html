@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %}
+    Gym Course
+{% endblock %}
+
+{% block content %}
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.9;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+	border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	background-color: rgba(220, 220, 220, 0.6);
+	padding: 20px;
+	text-align: center;
+    border-radius: 7px;
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport19.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+		<!-- MAIN (Center website) -->
+		<div class="main">
+
+		<h1>Gym Workout Courses</h1>
+		<hr>
+	
+		<h2>WHAT IS GYM?</h2>
+		<p>Gym is a place or club where you can go to exercise using machines, weights, and other equipment. </p>
+		<p>There are four major types of workouts in the gym which are endurance, strength, balance, and flexibility. Here is a brief introduction for the four main major.</p>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.open.edu/openlearn/pluginfile.php/2658803/mod_resource/content/0/e236_1_OLHP_786x400.jpg" alt="Endurance workouts" style="width:100%">
+		  			<h3>Endurance workouts</h3>
+		  			<p>Endurance workouts are designed to raise your heart rate and get your blood pumping faster. Endurance workouts are essentially cardiovascular workouts, working your body out aerobically. </p>
+                    <p>The goal of an endurance workout is to increase the number of times your muscles can contract before they become too tired.</p>
+                    <p>Examples of endurance exercises: Running, Swimming, Cycling, Resistance band squats and so on. </p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strength-training-1655306931.jpg" alt="Strength workouts" style="width:100%">
+		  			<h3>Strength workouts</h3>
+		  			<p>Strength workouts, alongside endurance workouts, are the most popular types of training, especially in the gym. Strength exercises are movements designed to build muscle mass.</p>
+                    <p>This happens by working the muscle until it 'rips'. The ripped muscle then repairs itself and grows back larger and stronger than it was before.</p>
+                    <p>Examples of strength training exercises: Weightlifting, Banded push-ups, Pull-ups, Squat holds and so on.</p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/620/Improve+Balance+620.jpg" alt="Balance" style="width:100%">
+		  			<h3>Balance</h3>
+		  			<p>Balance is essential for all able bodies, not just for athletes.</p>
+                    <p>Balance rarely gets its own focused workouts, but balance-focused exercises can help to improve your overall health and fitness and contribute to broader fitness goals. A typical workout could target the lower body to improve balance or the core for stability.</p>
+                    <p>Examples of balance focused exercises: Standing on one foot, Pilates, Martial Arts, Yoga and so on.</p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://cdn.24.co.za/files/Cms/General/d/1708/ad544018ad2f48a38303daff7a72dba2.gif" alt="Flexibility" style="width:100%">
+		  			<h3>Flexibility</h3>
+		  			<p>Flexibility is incredibly important too. Flexibility is essential for avoiding injuries, particularly during endurance events and strength training.</p>
+                    <p>The simplest way to work on improving flexibility is through stretching. Stretching loosens up our muscles by elongating them. </p>
+                    <p>Examples of flexibility exercises: Yoga, Resistance band stretches, Pilates and so on.</p>
+                </div>
+	  		</div>
+		</div>
+	
+
+	<div class="content">
+		<img src="https://www.muscleandfitness.com/wp-content/uploads/2018/11/Group-Fitness-Class-Performing-A-Variety-Of-Exercises-1.jpg?quality=86&strip=all" alt="Gym" style="width:100%">
+	  	<h3>BENEFITS OF GYM WORKOUT</h3>
+	  	<ul>
+			<p><li>Access to equipment</li></p>
+			<p><li>Access to knowledge</li></p>
+			<p><li>Build stronger joints and bones</li></p>
+			<p><li>Improve aerobic fitness</li></p>
+			<p><li>Improve agility</li></p>
+			<p><li>Avoid injuring joints and muscles</li></p>
+		</ul>
+		
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<div>
+	<h1 style="text-align: center">COURSE FEE</h1>
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Basic</li>
+			  	<li class="grey">RM 150 / class</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>Individual / Team Training</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color: mediumslateblue">Professional</li>
+			 	<li class="grey">RM 230 / class</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>Individual / Team Training</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Monthly Basic</li>
+			  	<li class="grey">RM 540 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color: mediumslateblue">Monthly Professional</li>
+			 	<li class="grey">RM 860 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>	
+{% endblock %}

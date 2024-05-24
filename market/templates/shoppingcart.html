@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}
+    Shopping Cart
+{% endblock %}
+{% block content %}
+<style>
+   body {
+        background-image: url(../static/sport13.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    h2 {
+      color: black;
+    }
+    p {
+      color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+   <div class="row" style="margin-top:20px; margin-left:20px">
+      <div class="col-8">
+         <h2>Available course on the Market</h2>
+         <p>Click on one of the course to start purchase</p>
+         <br>
+         <table class="table table-hover table-dark" aria-describedby="none">
+            <thead>
+               <tr>
+                  <!-- Your Columns HERE -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Courses</th>
+                  <th scope="col">Classcode</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Options</th>
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Your rows inside the table HERE: -->
+               {% for item in items %}
+               {% include 'includes/items_modals.html' %}
+               <tr>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.barcode }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>RM{{ item.price }}</td>
+                  <td>
+                     <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{ item.id }}">Purchase this Course</button>
+                  </td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+      <div class="col-4">
+         <h2>Owned Course</h2>
+         <p>Click on Remove Button to put owned course back on the Market</p>
+         <br>
+         <div class="row">
+            {% for owned_item in owned_items %}
+            {% include 'includes/owned_items_modals.html' %}
+               <div class="col-md-6">
+                  <div style="margin-bottom: 5px" class="card text-center bg-dark">
+                        <div class="card-body">
+                           <h5 class="card-title" style="color:white">{{ owned_item.name }}</h5>
+                           <button type="button" class="btn btn-outline-danger" style="margin-bottom: 5px"
+                                    data-toggle="modal" data-target="#Modal-RemovingConfirm-{{ owned_item.id }}">
+                                 Remove this Course
+                           </button>
+                              <p class="card-text" style="color:white">
+                                 <strong>
+                                    This Course costs RM{{ owned_item.price }}
+                                 </strong>
+                              </p>
+                        </div>
+                     </div>
+               </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</body>
+{% endblock %}

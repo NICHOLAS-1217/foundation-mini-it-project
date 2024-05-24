@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% block title %}
+    Gymnastics Course
+{% endblock %}
+
+{% block content %}
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.9;
+	border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+	border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	background-color: rgba(220, 220, 220, 0.6);
+	border-radius: 7px;
+	padding: 20px;
+	text-align: center;
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport16.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+		<!-- MAIN (Center website) -->
+		<div class= 'main'>
+
+		<h1>Gymnastics Courses</h1>
+		<hr>
+	
+		<h2>WHAT IS GYMNASTICS?</h2>
+		<p>Gymnastics is a fun activity that is the foundation for all sports and physical activity. It includes physical exercises requiring balance, strength, flexibility, agility, coordination, dedication and endurance.</p>
+		<p>There are many type of gymnastics. Here is a brief introduction to the various gymnastics classes offered at our teams.</p>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.researchgate.net/publication/356613987/figure/fig1/AS:1095710070054912@1638249046054/The-disciplines-in-mens-artistic-gymnastics.png" alt="Artistic Gymnastics" style="width:100%">
+		  			<h3>Artistic Gymnastics</h3>
+		  			<p>Artistic gymnastics is a discipline of gymnastics in which athletes perform short routines on different apparatuses. </p>
+                    <p>It is the biggest ticket seller in the Olympics, and consists of short 30-90 second routines performed on different apparatuses. The sport is further divided into men(MAG) and women(WAG) only events. While both WAG and MAG require a lot of endurance, coordination and strength, the former is artistic, using beautiful, choreographed movements, while the latter emphasizes strength.</p>
+				</div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://st2.depositphotos.com/4216129/12369/v/950/depositphotos_123699236-stock-illustration-rhythmic-gymnasts-training-with-different.jpg" alt="Rhythmic Gymnastics" style="width:100%">
+		  			<h3>Rhythmic Gymnastics (RG)</h3>
+		  			<p>Rhythmic gymnastics is a sport in which gymnasts perform on a floor with an apparatus: hoop, ball, clubs, ribbon or rope. </p>
+                    <p>Rhythmic gymnastics is currently performed by women only. As the name suggests, it displays graceful movements emphasizing flexibility and agility using hoops, balls, ropes and ribbons. RG is broken into individual and team events and is usually practiced with music. The art form utilizes elements of ballet, dance and apparatus manipulation to showcase dexterity, endurance and hand-eye coordination.</p>
+                </div>
+	  		</div>
+
+              <div class="column">
+				<div class="content">
+		  			<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Women%27s_Trio.jpg" alt="Acrobatic Gymnastics" style="width:100%">
+		  			<h3>Acrobatic Gymnastics</h3>
+		  			<p>Acrobatic gymnastics is hands down the most stunning displays of strength and coordination in gymnastics! No equipment is used here. Teams of 2-4 gymnasts perform three types of acrobatic moves - balance routines that emphasizes strength, dynamic routines with throws, catches and somersaults and finally a combined routine that uses elements of both. Acrobatic gymnastics have earned fame for their exhilarating maneuvers that are daring and often risky!</p>
+				</div>
+	  		</div>
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://d32ydbgkw6ghe6.cloudfront.net/production/uploads/cover_images/249bdbd1267618495e78163d95525e936033/i1080x475.jpg" alt="Trampoline Gymnastics" style="width:100%">
+		  			<h3>Trampoline Gymnastics (TRG)</h3>
+		  			<p>Trampolining or trampoline gymnastics is a recreational activity, acrobatic training tool as well as a competitive Olympic sport in which athletes perform acrobatics while bouncing on a trampoline. </p>
+				</div>
+	  		</div>
+		</div>
+	
+
+	<div class="content">
+		<img src="https://cdn.mos.cms.futurecdn.net/VKLyGJFseGzCjHwp9vXosK-1200-80.jpg" alt="Gymnastics" style="width:100%">
+	  	<h3>BENEFITS OF GYMNASTICS</h3>
+	  	<ul>
+			<p><li>Disease Prevention</li></p>
+			<p><li>Improves Motor Skill Development and Accelerates Learning</li></p>
+			<p><li>Improves Strength</li></p>
+			<p><li>Improves Concentration</li></p>
+			<p><li>Discipline</li></p>
+		</ul>
+		
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+	<div>
+	<h1 style="text-align: center">COURSE FEE</h1>
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Artistic Gymnastics</li>
+			  	<li class="grey">RM 200 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color: mediumslateblue">Rhythmic Gymnastics</li>
+			 	<li class="grey">RM 180 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Acrobatic Gymnastics</li>
+			  	<li class="grey">RM 280 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color: mediumslateblue">Trampoline Gymnastics</li>
+			 	<li class="grey">RM 240 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>4 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>	
+{% endblock %}

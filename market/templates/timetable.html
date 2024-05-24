@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}
+   My TimeTable
+{% endblock %}
+{% block content %}
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile Page</title>
+   <!--MATERIAL CDN-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+   <!--STYLESHEET-->
+   <link rel="stylesheet" href="../static/profile.css">
+</head>
+<body>
+   <div class="container">
+      <aside>
+       
+         <div class="sidebar">
+            <a href="{{ url_for('profile_page') }}">
+               <span class="material-icons-sharp">grid_view</span>
+               <h3>Dashboard</h3>
+            </a>
+            <a href="{{ url_for('timetable_page') }}" class="active">
+               <span class="material-icons-sharp">table_view</span>
+               <h3>My Time Table</h3>
+            </a>
+         </a>
+         <a href="{{ url_for('people_page') }}">
+           <span class="material-icons-sharp">person_outline</span>
+           <h3>People</h3>
+        </a>
+         </div>
+      </aside>
+   
+   <div class="row" style="margin-top:20px; margin-left:20px">
+      <div class="col-8">
+          <h1>MY TIME TABLE</h1>
+          <br>
+         <table class="table table-hover table-dark">
+            <thead>
+               <tr>
+                  <!-- Your Columns HERE -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Courses</th>
+                  <th scope="col">Classcode</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">day</th>
+                  <th scope="col">time</th>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Your rows inside the table HERE: -->
+               {% for item in owned_items %}
+               <tr>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.barcode }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>{{ item.day }}</td>
+                  <td>{{ item.time }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+   </div>
+   <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" style="margin-right: 1000px;"></script>
+</body>
+{% endblock %}

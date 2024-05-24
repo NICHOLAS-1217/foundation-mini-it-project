@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% block title %}
+    Ball Games Course
+{% endblock %}
+
+{% block content %}
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.9;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+	border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	background-color: rgba(220, 220, 220, 0.6);
+	padding: 20px;
+	text-align: center;
+    border-radius: 7px;
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport13.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+		<!-- MAIN (Center website) -->
+		<div class="main">
+
+		<h1>Ball Games Courses</h1>
+		<hr>
+	
+		<h2>WHAT IS BALL GAMES?</h2>
+		<p>Ball games also ball sports, are any form of game or sport which feature a ball as part of play. These include games such as football, cricket, baseball, basketball, and American football. </p>
+		<p>There are many type of ball games. Here is a brief introduction to the various ball games classes offered at our teams.</p>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://cdn.i-scmp.com/sites/default/files/d8/video/thumbnail/2022/01/15/web_clean_djokovic.jpg" alt="Tennis" style="width:100%">
+		  			<h3>Tennis</h3>
+		  			<p>Tennis, original name lawn tennis, game in which two opposing players (singles) or pairs of players (doubles) use tautly strung rackets to hit a ball of specified size, weight, and bounce over a net on a rectangular court. </p>
+                    <p>Players/teams cannot carry the ball or catch it with the racquet. Players cannot hit the ball twice. Players must wait until the ball passes the net before they can return it. A player that does not return a live ball before it bounces twice loses the point.</p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.tabletennisspot.com/wp-content/uploads/2018/06/table-tennis-for-kids.jpg" alt="Table Tennis" style="width:100%">
+		  			<h3>Table Tennis</h3>
+		  			<p>Table tennis, also known as ping-pong and whiff-whaff, is a sport in which two or four players hit a lightweight ball, also known as the ping-pong ball, back and forth across a table using small solid rackets. The game takes place on a hard table divided by a net.</p>
+                    <p>Except for the initial serve, the rules are generally as follows: players must allow a ball played toward them to bounce once on their side of the table and must return it so that it bounces on the opposite side at least once. A point is scored when a player fails to return the ball within the rules. Play is fast and demands quick reactions. Spinning the ball alters its trajectory and limits an opponent's options, giving the hitter a great advantage. </p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://news.cgtn.com/news/2021-05-23/Reform-of-badminton-scoring-system-fails-to-pass-in-BWF-10vjMSvDOUM/img/13facbf2b5f247d9824df627f85afd0e/13facbf2b5f247d9824df627f85afd0e.jpeg" alt="Badminton" style="width:100%">
+		  			<h3>Badminton</h3>
+		  			<p>Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players per side). </p>
+                    <p>Badminton is often played as a casual outdoor activity in a yard or on a beach; formal games are played on a rectangular indoor court. Points are scored by striking the shuttlecock with the racquet and landing it within the opposing side's half of the court.</p>
+                </div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://medias.paris2024.org/uploads/2020/11/Volley-ball.jpeg?x-oss-process=image/resize,w_2508,h_1672,m_lfit/format,jpeg" alt="Volleyball" style="width:100%">
+		  			<h3>Volleyball</h3>
+		  			<p>Volleyball, game played by two teams, usually of six players on a side, in which the players use their hands to bat a ball back and forth over a high net, trying to make the ball touch the court within the opponents' playing area before it can be returned. </p>
+                    <p>To prevent this a player on the opposing team bats the ball up and toward a teammate before it touches the court surface—that teammate may then volley it back across the net or bat it to a third teammate who volleys it across the net. A team is allowed only three touches of the ball before it must be returned over the net.</p>
+                </div>
+	  		</div>
+		</div>
+	
+
+	<div class="content">
+		<img src="https://empoweredparents.co/wp-content/uploads/2021/06/ball-activities-for-preschoolers.jpg" alt="Ball Games" style="width:100%">
+	  	<h3>BENEFITS OF BALL GAMES</h3>
+	  	<ul>
+			<p><li>Eye-Hand Coordination</li></p>
+			<p><li>Gross Motor Skills</li></p>
+			<p><li>Grasping Skills</li></p>
+			<p><li>Help your children to maintain a good level of fitness and a sensible weight</li></p>
+			<p><li>Encourage confidence and improve social skills</li></p>
+			<p><li>Promoting concentration</li></p>
+		</ul>
+		
+        <h3>HINT</h3>
+		<ol>
+			<p><li>Consider Your Health</li></p>
+			<p><li>Consider your Interests</li></p>
+			<p><li>Check Your Lifestyle</li></p>
+		</ol>
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<div>
+	<h1 style="text-align: center">COURSE FEE</h1>
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Tennis</li>
+			  	<li class="grey">RM 150 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>Tennis Court Available</li>
+			 	<li>Provide Excellent Service</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Table Tennis</li>
+			 	<li class="grey">RM 130 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>Provide Table Tennis Venue</li>
+			 	<li>Provide Excellent Service</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Badminton</li>
+			  	<li class="grey">RM 150 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>Badminton Court Available</li>
+			 	<li>Provide Excellent Service</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Volleyball</li>
+			 	<li class="grey">RM 110 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>Volleyball Court Available</li>
+			 	<li>Provide Excellent Service</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

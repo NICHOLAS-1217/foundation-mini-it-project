@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}
+    Profile Page
+{% endblock %}
+
+{% block content %}
+<style>
+   body {
+      background-image: url(../static/loginback.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!--MATERIAL CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../static/profile.css">
+ </head>
+ <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <aside>
+
+       <div class="sidebar">
+          <a href="#" class="active">
+             <span class="material-icons-sharp">grid_view</span>
+             <h3>Dashboard</h3>
+          </a>
+          <a href="{{ url_for('timetable_page') }}">
+             <span class="material-icons-sharp">table_view</span>
+             <h3>My Time Table</h3>
+          </a>
+          <a href="{{ url_for('people_page') }}">
+            <span class="material-icons-sharp">person_outline</span>
+            <h3>People</h3>
+         </a>
+       </div>
+    </aside>
+   </nav>
+    <!------------ END OF ASIDE -------------->
+    <main>
+    <h1>Profile</h1>
+    <a class="nav-link"><h2>WELCOME, {{ current_user.username }}</h2></a>
+    <div class="date">
+       <input type="date">
+    </div>
+
+    
+    <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" style="margin-right: 1000px;"></script>
+ </body>
+{% endblock %}

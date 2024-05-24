@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %}
+    Dancing Course
+{% endblock %}
+
+{% block content %}
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.9;
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+	border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	background-color: rgba(220, 220, 220, 0.6);
+	padding: 20px;
+	text-align: center;
+    border-radius: 7px;
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport20.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+		<!-- MAIN (Center website) -->
+		<div class="main">
+
+		<h1>Dancing Courses</h1>
+		<hr>
+	
+		<h2>WHAT IS DANCING?</h2>
+		<p>Dance, the movement of the body in a rhythmic way, usually to music and within a given space, for the purpose of expressing an idea or emotion, releasing energy, or simply taking delight in the movement itself. It a performing art form consisting of sequences of movement, either improvised or purposefully selected.</p>
+		<p>There are many type of dancing. Here is a brief introduction to the various dancing classes offered at our teams.</p>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+	  		<div class="column">
+				<div class="content">
+		  			<img src="http://st2.depositphotos.com/3917667/7111/i/450/depositphotos_71118365-classic-ballerina-posing-at-ballet-barre.jpg" alt="Ballet" style="width:100%">
+		  			<h3>Ballet</h3>
+		  			<p>Ballet is an artistic dance form performed to music, using precise and highly formalized set steps and gestures. Classical ballet, which originated in Renaissance Italy and established its present form during the 19th century, is characterized by light, graceful movements and the use of pointe shoes with reinforced toes. </p>
+                    <p>There are many styles of ballet. Example: Classical, Neoclassical, Romantic, Cecchetti Method, Balanchine Method and so on. </p>
+				</div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://media.istockphoto.com/photos/two-young-people-guy-and-girl-in-casual-clothes-dancing-contemporary-picture-id1334841020?k=20&m=1334841020&s=612x612&w=0&h=LsTymAEfSU6aBES-7IqaeXMnvmOqkcu7bcIggPCJBYM=" alt="Hip-Hop" style="width:100%">
+		  			<h3>Hip-Hop</h3>
+		  			<p>Hip-hop dancing refers to a range of street dances that developed in relation to hip hop music and culture. Main styles of hip-hop dancing include Breaking, Locking and Popping, with derivative styles emerging out of these including Memphis Jookin', Turfing, Jerkin' and Krumping.  </p>
+                    <p>Unlike many competitive dance styles, hip-hop is often improvisational with dance crews challenging each other to dance battles.</p>
+                </div>
+	  		</div>
+
+              <div class="column">
+				<div class="content">
+		  			<img src="http://5b0988e595225.cdn.sohucs.com/images/20190813/92a0302fa92b4e50b613608330a2ad8e.png" alt="Jazz" style="width:100%">
+		  			<h3>Jazz</h3>
+		  			<p>Jazz dancing has its roots in seventeenth-century African traditions, brought to the Americas via the Atlantic slave trade as slaves continued dancing traditions in Brazil, the US and elsewhere on the continents.</p>
+                    <p>It is a form of dance that combines both African and European dance styles. This high-energy dance has a liveliness that sets it apart from traditional dance forms, such as classical ballet. Like jazz music, jazz dance features improvisation. </p>
+				</div>
+	  		</div>
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://tqimg.idongde.com/d/2020/04/14/1586865937423091.jpg?x-image-process=image/resize,w_500" alt="Modern Dance" style="width:100%">
+		  			<h3>Modern Dance</h3>
+		  			<p>Modern dance is a broad genre of western concert or theatrical dance which included dance styles such as ballet, folk, ethnic, religious, and social dancing; and primarily arose out of Europe and the United States in the late 19th and early 20th centuries. </p>
+				</div>
+	  		</div>
+		</div>
+	
+
+	<div class="content">
+		<img src="https://i.pinimg.com/originals/04/51/ae/0451ae63025a43dc57f86eaf4da028ec.png" alt="Dance" style="width:100%">
+	  	<h3>BENEFITS OF DANCING</h3>
+	  	<ul>
+			<p><li>Stay fit for people of all ages, shapes and sizes.</li></p>
+			<p><li>A great way to meet new friends.</li></p>
+			<p><li>Improved balance and spatial awareness</li></p>
+			<p><li>Increased physical confidence</li></p>
+			<p><li>Better coordination, agility and flexibility.</li></p>
+            <p><li>Increased muscular strength, endurance and motor fitness.</li></p>
+        </ul>
+		
+        <h3>HINT</h3>
+		<ol>
+			<p><li>Consider your personality and music tastes before choosing a dance style.</li></p>
+			<p><li>Posture, poise, graceful movement and a lot of strength are required for ballet. </li></p>
+			<p><li>A dynamic and high- energy option perfect for music lovers and natural athletes. </li></p>
+			<p><li>Consider the limits of your body to stay safe.</li></p>
+		</ol>
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<div>
+	<h1 style="text-align: center; color: white;">COURSE FEE</h1>
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Ballet</li>
+			  	<li class="grey">RM 720 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Hip-Hop</li>
+			 	<li class="grey">RM 560 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Jazz</li>
+			  	<li class="grey">RM 600 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Modern Dance</li>
+			 	<li class="grey">RM 680 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

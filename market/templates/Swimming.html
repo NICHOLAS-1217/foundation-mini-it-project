@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% block title %}
+    Swimming Course
+{% endblock %}
+
+{% block content %}
+
+<style>
+	/* Center website */
+	.main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+.row {
+	margin: 8px -16px;
+	
+}
+
+
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	opacity: 0.9;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.column {
+	width: 50%;
+	}
+}
+
+
+/* Price List */
+
+.columns {
+	float: left;
+	width: 25%;
+	padding: 8px;
+}
+
+/* Table border */
+.price {
+	list-style-type: none;
+	border-radius: 7px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Line in table */
+.price li {
+	border-radius: 7px;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(220, 220, 220, 0.6);
+}
+
+.price .grey {
+	background-color: gainsboro;
+}
+
+.button {
+	background-color: mediumslateblue;
+	border-radius: 7px;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns {
+	width: 100%;
+	}
+}
+body {
+    background-image: url(../static/sport7.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+<body>
+		<!-- MAIN (Center website) -->
+		<div class="main">
+
+		<h1>Swimming Courses</h1>
+		<hr>
+	
+		<h2>WHAT IS SWIMMING?</h2>
+		<p>Swimming, in recreation and sports, the propulsion of the body through water by combined arm and leg motions and the natural flotation of the body.</p>
+		<p>There are many type of swimming styles. Here is a brief introduction to the 4 most common types of swimming classes offered at our teams.</p>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.kreedon.com/wp-content/uploads/2019/05/ARENA_crawl_Blog-1.gif?x48487" alt="Front Crawl" style="width:100%">
+		  			<h3>Front Crawl</h3>
+		  			<p>Front Crawl also known as the front crawl, this is the classic swimming posture. Lie on your stomach and flutter your legs while alternating the arms in a windmill motion. You propel yourself forward with moderate speed in a specific direction. The freestyle is a great competitive and exercise stroke, and allows you to swim longer distances without exhaustion.</p>
+				</div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.kreedon.com/wp-content/uploads/2019/05/ARENA_breaststroke_blog.gif?x48487" alt="Breaststroke" style="width:100%">
+		  			<h3>Breaststroke</h3>
+		  			<p>Float with your stomach facing down, then move your arms in a half-circle motion in front of the body. Bend your legs, then kick back with good timing, and you'll propel yourself up and forward. This is a great workout and is recommended for those who swim for exercise.</p>
+				</div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.kreedon.com/wp-content/uploads/2019/05/giphy-1.gif?x48487" alt="Butterfly Stroke" style="width:100%">
+		  			<h3>Butterfly Stroke</h3>
+		  			<p>The butterfly stroke involves a prone position. It is quite exhausting and strenuous relative to other types of swimming strokes. In this stroke, the body executes wave-like movements, moving chest and hip up and down the water surface.</p>
+				</div>
+	  		</div>
+
+
+	  		<div class="column">
+				<div class="content">
+		  			<img src="https://www.kreedon.com/wp-content/uploads/2019/05/giphy.gif?x48487" alt="Backstroke" style="width:100%">
+		  			<h3>Backstroke</h3>
+		  			<p>Lie on your back and flutter your legs while circling your arms in a windmill motion. It’s very similar to the freestyle, but you swim on your back and propel yourself backwards.</p>
+				</div>
+	  		</div>
+		</div>
+	
+
+	<div class="content">
+		<img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-1/baby_swimming-1200x628-header.jpg?w=1155&h=1318=" alt="Swimming" style="width:100%">
+	  	<h3>BENEFITS OF SWIMMING</h3>
+	  	<ul>
+			<p><li>Helps you maintain a healthy weight, healthy heart and lungs</li></p>
+			<p><li>Improving coordination, balance and posture</li></p>
+			<p><li>Builds endurance, muscle strength and cardiovascular fitness</li></p>
+			<p><li>Alleviating stress</li></p>
+			<p><li>Providing a pleasant way to cool down on a hot day</li></p>
+		</ul>
+		
+		<h3>HINT</h3>
+		<ol>
+			<p><li>Breaststroke is the slowest one among all the 5 types of swimming strokes. Generally, beginners are taught this technique first since the head is above the water for most of the time.</li></p>
+			<p><li>The butterfly stroke is one of the most difficult strokes to master. The undulations, dolphin kick, and arm movements are all not so easy to learn. It is very tiring and therefore not usually used for recreational or fitness swimmers.</li></p>
+			<p><li>Many doctors recommend this technique to those who have back problems, or to develop stronger back muscle. This can be a more difficult stroke.</li></p>
+		</ol>
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<div>
+	<h2 style="text-align: center">COURSE FEE</h2>
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Front Crawl</li>
+			  	<li class="grey">RM 220 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Breaststroke</li>
+			 	<li class="grey">RM 240 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+		  
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header">Butterfly Stroke</li>
+			  	<li class="grey">RM 260 / month</li>
+			  	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+			 	<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+
+		<div class="columns">
+			<ul class="price">
+			  	<li class="header" style="background-color:mediumslateblue">Backstroke</li>
+			 	<li class="grey">RM 240 / month</li>
+			 	<li>Provide Professional Coaches</li>
+			 	<li>Provide Professional Training</li>
+			 	<li>One Free Trial Lesson</li>
+			 	<li>8 classes per month</li>
+				<li class="grey"><a href="{{ url_for('shoppingcart_page') }}" class="button">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+{% endblock %}

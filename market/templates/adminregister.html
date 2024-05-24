@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}
+    Admin Register Page
+{% endblock %}
+
+{% block content %}
+<style>
+    a:visited {
+        color: rgb(0, 0, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(255, 0, 0);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: rgb(255, 0, 255);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    body {
+        background-image: url(../static/sport1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:rgb(255, 255, 255)">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="../static/logo.png" alt="" width="220" height="'200">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create Your Admin Account
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="Password") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+
+            <br>
+
+            <div class="checkbox mb-3">
+                <p><a href="{{ url_for('adminlogin_page') }}"> Already have an admin account?</a></p>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+
+    <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" style="margin-right: 1000px;"></script>
+</body>
+{% endblock %}

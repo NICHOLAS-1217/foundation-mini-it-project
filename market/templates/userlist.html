@@ -1,0 +1,66 @@
+{% extends 'adminbase.html' %}
+{% block title %}
+    Registered User LIST
+{% endblock %}
+{% block content %}
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin Page</title>
+   <!--MATERIAL CDN-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+   <!--STYLESHEET-->
+   <link rel="stylesheet" href="../static/profile.css">
+</head>
+<body>
+   <div class="container">
+   <aside>
+
+      <div class="sidebar">
+         <a href="{{ url_for('admin_page') }}">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+         </a>
+         <a href="{{ url_for('userlist_page') }}"class="active">
+            <span class="material-icons-sharp">person_outline</span>
+            <h3>REGISTERED USER</h3>
+         </a>
+         <a href="{{ url_for('courses_page') }}">
+            <span class="material-icons-sharp">person_outline</span>
+            <h3>COURSES</h3>
+         </a>
+      </div>
+   </aside>
+   <div class="row" style="margin-top:20px; margin-left:20px">
+      <div class="col-8">
+          <h2>REGISTERED USER LIST</h2>
+          <br>
+         <table class="table table-hover table-dark">
+            <thead>
+               <tr>
+                  <!-- Your Columns HERE -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Email Address</th>
+                  <th scope="col">Budget</th>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Your rows inside the table HERE: -->
+               {% for user in user_list %}
+               <tr>
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.username }}</td>
+                  <td>{{ user.email_address }}</td>
+                  <td>{{ user.budget }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+   </div>
+   <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" style="margin-right: 1000px;"></script>
+</body>
+{% endblock %}

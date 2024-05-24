@@ -1,0 +1,73 @@
+{% extends 'adminbase.html' %}
+{% block title %}
+   Courses LIST
+{% endblock %}
+{% block content %}
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin Page</title>
+   <!--MATERIAL CDN-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+   <!--STYLESHEET-->
+   <link rel="stylesheet" href="../static/profile.css">
+</head>
+<body>
+   <div class="container">
+   <aside>
+
+      <div class="sidebar">
+         <a href="{{ url_for('admin_page') }}"class="active">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+         </a>
+         <a href="{{ url_for('userlist_page') }}">
+            <span class="material-icons-sharp">person_outline</span>
+            <h3>REGISTERED USER</h3>
+         </a>
+         <a href="{{ url_for('courses_page') }}">
+            <span class="material-icons-sharp">person_outline</span>
+            <h3>COURSES</h3>
+         </a>
+      </div>
+   </aside>
+   <div class="row" style="margin-top:20px; margin-left:20px">
+      <div class="col-8">
+          <h2>COURSES LIST</h2>
+          <br>
+         <table class="table table-hover table-dark">
+            <thead>
+               <tr>
+                  <!-- Your Columns HERE -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Barcode</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Owner</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Day</th>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <!-- Your rows inside the table HERE: -->
+               {% for item in item_list %}
+               <tr>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.price }}</td>
+                  <td>{{ item.barcode }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>{{ item.owner }}</td>
+                  <td>{{ item.time }}</td>
+                  <td>{{ item.day }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+   </div>
+</body>
+{% endblock %}
